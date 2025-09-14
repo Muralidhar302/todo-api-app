@@ -1,0 +1,21 @@
+replicaCount: 2
+image:
+  repository: yourdockerhub/todo-api
+  tag: latest
+  pullPolicy: Always
+service:
+  type: NodePort
+  port: 3000
+livenessProbe:
+  httpGet:
+    path: /health
+    port: 3000
+  initialDelaySeconds: 10
+  periodSeconds: 10
+readinessProbe:
+  httpGet:
+    path: /health
+    port: 3000
+  initialDelaySeconds: 10
+  periodSeconds: 10
+

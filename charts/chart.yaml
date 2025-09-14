@@ -1,0 +1,4 @@
+apiVersion : v2
+name : todo - api
+description : Helm chart for Todo API
+version : 0.1.0
